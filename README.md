@@ -1,10 +1,10 @@
-# Project Name
+# Chat with spring 3.1.5 and Java17
 
-One On One Chat application | Spring boot & WebSocket | By Alibou
+One On One Chat application | Spring boot & WebSocket | By Pedro Europeu
 
 ## Overview
 
-Explore the world of **WebSockets** with **Alibou**, your experienced software engineer guide. If you missed our previous session delving into the magic of WebSockets and creating a lively group chat application, catch up [here](https://www.youtube.com/watch?v=7T-HnTE6v64&ab_channel=BoualiAli).
+Explore the world of **WebSockets** with **Pedro Europeu**, your experienced software engineer guide. If you missed our previous session delving into the magic of WebSockets and creating a lively group chat application, catch up [here](https://www.youtube.com/watch?v=7T-HnTE6v64&ab_channel=BoualiAli).
 
 Today's focus is on real-time communication, as we build a **one-on-one chat application** that ensures private, secure conversations. Taking it a step further, we'll persist these chats in a **MongoDB database**.
 
@@ -12,7 +12,7 @@ Before diving into the code, a special mention for those keen on deepening their
 
 🔔 If you're not part of our community yet, consider hitting that star button! Stay tuned for weekly releases of engaging content where we explore, learn, and code together.
 
-👨‍💻 I'm Alibou, excited to guide you through today's exploration. Let's embark on this coding adventure together, building a one-on-one chat application, uncovering WebSockets intricacies, and mastering the art of data persistence in MongoDB.
+👨‍💻 I'm Pedro Europeu, excited to guide you through today's exploration. Let's embark on this coding adventure together, building a one-on-one chat application, uncovering WebSockets intricacies, and mastering the art of data persistence in MongoDB.
 
 ---
 
@@ -52,13 +52,17 @@ Provide step-by-step instructions on how to install and set up your project loca
 
 ```bash
 # Clone the repository
-git clone https://github.com/ali-bouali/one-to-one-chat-spring-boot-web-socket
+git clone https://github.com/pedroeuropeu/chat-spring-3-1-5-java17.git
 
 # Change into the project directory
-cd your-project
+cd chat-spring-3-1-5-java17
 
-# Build the project
+docker-compose up&
+
+# Build the project with java17
 ./mvnw clean install
+
+mvn spring-boot:run
 ```
 
 ---

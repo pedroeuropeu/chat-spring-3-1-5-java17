@@ -1,6 +1,7 @@
 package com.pedroeuropeu.websocket.chat;
 
 import com.pedroeuropeu.websocket.chatroom.ChatRoomService;
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,11 @@ import java.util.List;
 public class ChatMessageService {
     private final ChatMessageRepository repository;
     private final ChatRoomService chatRoomService;
+
+    @PostConstruct
+    public void clearRooms(){
+        repository.deleteAll();
+    }
 
     public ChatMessage save(ChatMessage chatMessage) {
         var chatId = chatRoomService

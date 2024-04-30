@@ -2,6 +2,7 @@ package com.pedroeuropeu.websocket.user;
 
 
 import com.pedroeuropeu.websocket.enums.Status;
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,11 @@ import java.util.List;
 public class UserService {
 
     private final UserRepository repository;
+
+    @PostConstruct
+    public void clearUsers(){
+        repository.deleteAll();
+    }
 
     public void saveUser(User user) {
         user.setStatus(Status.ONLINE);
